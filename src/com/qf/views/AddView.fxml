@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="609.0" prefWidth="432.0" style="-fx-background-color: #fff;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.qf.controller.AddController">
+
+    <VBox prefHeight="447.0" prefWidth="430" spacing="15">
+        <children>
+            <VBox alignment="CENTER" prefHeight="160.0" prefWidth="430.0" spacing="20"
+                  style="-fx-background-color: rgb(2, 182, 253);">
+                <HBox alignment="CENTER">
+                    <TextField fx:id="idInput" prefHeight="41.0" prefWidth="255.0" promptText="请输入餐桌号"
+                               style="-fx-background-radius: 10px;"/>
+                </HBox>
+
+                <ComboBox fx:id="comboBox" editable="false" prefHeight="31.0" prefWidth="163.0" promptText="请选择预约或者就坐"
+                          style="-fx-background-color: rgb(71, 195, 112);">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="预约"/>
+                            <String fx:value="就坐"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+
+            <VBox prefHeight="272.0" prefWidth="430.0" spacing="10">
+                <HBox alignment="CENTER" spacing="10">
+                    <Text>请选择菜</Text>
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="10">
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/suancy.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox1" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="金汤酸菜鱼"/>
+                    </VBox>
+
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/kaja.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox2" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="可乐鸡翅"/>
+                    </VBox>
+
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/ftq.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox3" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="佛跳墙"/>
+                    </VBox>
+
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/bqj.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox4" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="白切鸡"/>
+                    </VBox>
+
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="10">
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/gongbaojiding.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox5" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="宫保鸡丁"/>
+                    </VBox>
+
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/jada.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox6" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="九转大肠"/>
+                    </VBox>
+
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/szt.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox7" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="狮子头"/>
+                    </VBox>
+
+                    <VBox>
+                        <ImageView fitHeight="87" fitWidth="87" pickOnBounds="true" preserveRatio="true">
+                            <!--           设置是否可以设置大仙，设置是否显示-->
+                            <Image url="@/com/qf/images/bake.png"/>
+                            <!--               只能写sec下的路径-->
+                        </ImageView>
+                        <CheckBox fx:id="checkBox8" prefHeight="15.0" prefWidth="87.0"
+                                  style="-fx-background-color: rgb(71, 195, 112);" text="北京烤鸭"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+        </children>
+    </VBox>
+    <TextField fx:id="memoInput" layoutX="52.0" layoutY="448.0" prefHeight="33.0" prefWidth="328.0" promptText="请输入备注"
+               style="-fx-background-radius: 10px;"/>
+    <Button layoutX="96.0" layoutY="524.0" onAction="#sure" prefHeight="42.0" prefWidth="238"
+            style="-fx-background-color: rgb(71, 195, 112);" text="确认" textFill="WHITE">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+
+
+</AnchorPane>

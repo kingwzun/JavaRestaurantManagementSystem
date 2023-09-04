@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="506.0" prefWidth="862.0" style="-fx-background-color: rgb(2, 182, 253);"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.qf.controller.HomeController">
+
+    <SplitPane dividerPositions="0.23182957393483708" layoutY="48.0" prefHeight="458.0" prefWidth="862.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="266.0">
+            <VBox alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="465.0" prefWidth="196.0">
+                <VBox alignment="CENTER" prefHeight="466.0" prefWidth="196.0" spacing="20"
+                      style="-fx-background-color: rgb(2, 182, 253);">
+                    <HBox alignment="CENTER" spacing="20">
+                        <TextField fx:id="searchInput" prefHeight="33.0" prefWidth="151.0" promptText="请输入需要查询的餐桌号"/>
+                    </HBox>
+                    <Button onAction="#queryInformation" prefHeight="34.0" prefWidth="118.0"
+                            style="-fx-background-color: rgb(2, 182, 253); -fx-border-color: #fff; -fx-border-radius: 10px; -fx-border-width: 2px;"
+                            text="查询餐桌信息" textFill="WHITE">
+                        <font>
+                            <Font name="Microsoft YaHei Bold" size="14.0"/>
+                        </font>
+                    </Button>
+                    <Button onAction="#initialize" prefHeight="34.0" prefWidth="119.0"
+                            style="-fx-background-color: rgb(2, 182, 253); -fx-border-color: #fff; -fx-border-radius: 10px; -fx-border-width: 2px;"
+                            text="刷新当前页面" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Button>
+
+
+                    <HBox alignment="CENTER" spacing="20">
+                        <Button onAction="#add" prefHeight="35.0" prefWidth="120.0"
+                                style="-fx-background-color: rgb(2, 182, 253); -fx-border-color: #fff; -fx-border-radius: 10px; -fx-border-width: 2px;"
+                                text="增加餐桌信息" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Button>
+                    </HBox>
+
+                    <HBox alignment="CENTER" prefHeight="58.0" prefWidth="196.0" spacing="20">
+
+                        <Button onAction="#update" prefHeight="42.0" prefWidth="119.0"
+                                style="-fx-background-color: rgb(2, 182, 253); -fx-border-color: #fff; -fx-border-radius: 10px; -fx-border-width: 2px;"
+                                text="修改餐桌信息" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Button>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="46.0" prefWidth="196.0" spacing="20">
+                        <children>
+                            <Button onAction="#del" prefHeight="41.0" prefWidth="119.0"
+                                    style="-fx-background-color: rgb(2, 182, 253); -fx-border-color: #fff; -fx-border-radius: 10px; -fx-border-width: 2px;"
+                                    text="删除餐桌信息" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                            </Button>
+                        </children>
+                    </HBox>
+                    <Button onAction="#initCheckout" prefHeight="30.0" prefWidth="119.0"
+                            style="-fx-background-color: rgb(2, 182, 253); -fx-border-radius: 10px; -fx-border-width: 2px; -fx-border-color: #fff;"
+                            text="结账" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Button>
+                </VBox>
+            </VBox>
+
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="724.0">
+            <children>
+                <TabPane layoutX="-4.0" layoutY="-2.0" prefHeight="467.0" prefWidth="667.0"
+                         style="-fx-background-color: rgb(2, 182, 253);" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="餐桌信息管理表">
+                            <TableView fx:id="tableView" layoutX="55.0" layoutY="69.0" prefHeight="370.0"
+                                       prefWidth="682.0" style="-fx-background-color: #fff;">
+                                <columns>
+                                    <TableColumn fx:id="idColumn" prefWidth="63.0" text="id"/>
+                                    <TableColumn fx:id="stateColumn" prefWidth="84.0" text="就餐状态"/>
+                                    <TableColumn fx:id="classificationColumn" prefWidth="131.0" text="菜品数量"/>
+                                    <TableColumn fx:id="moneyColumn" prefWidth="96.0" text="消费金额"/>
+                                    <TableColumn fx:id="memoColumn" prefWidth="168.39996337890625" text="备注"/>
+                                    <TableColumn fx:id="dateColumn" prefWidth="125.20001220703125" text="入座时间"/>
+                                </columns>
+                            </TableView>
+                        </Tab>
+                        <Tab text="菜单信息管理表">
+                            <TableView fx:id="tableView2" layoutX="55.0" layoutY="69.0" prefHeight="438.0"
+                                       prefWidth="472.0">
+                                <columns>
+                                    <TableColumn fx:id="id2Column" prefWidth="50.0" text="桌号"/>
+                                    <TableColumn fx:id="dish1" prefWidth="42.0" text="酸菜鱼"/>
+                                    <TableColumn fx:id="dish2" prefWidth="67.0" text="可乐鸡翅"/>
+                                    <TableColumn fx:id="dish3" prefWidth="68.0" text="佛跳墙"/>
+                                    <TableColumn fx:id="dish4" prefWidth="79.0" text="白切鸡"/>
+                                    <TableColumn fx:id="dish5" prefWidth="99.0" text="宫保鸡丁"/>
+                                    <TableColumn fx:id="dish6" prefWidth="69.0" text="九转大肠"/>
+                                    <TableColumn fx:id="dish7" prefWidth="85.0" text="狮子头"/>
+                                    <TableColumn fx:id="dish8" prefWidth="103.0" text="北京烤鸭"/>
+                                </columns>
+                            </TableView>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </SplitPane>
+    <HBox alignment="CENTER" layoutX="74.0" prefHeight="39.0" prefWidth="178.0">
+        <children>
+            <Label fx:id="usernameLabel" alignment="BOTTOM_CENTER" prefHeight="47.0" prefWidth="100.0"
+                   style="-fx-alignment: center;" textFill="WHITE"/>
+            <Label alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="82.0" style="-fx-alignment: center;"
+                   text="欢迎登录" textFill="WHITE"/>
+        </children>
+    </HBox>
+    <HBox/>
+    <Button layoutX="780.0" layoutY="5.0" onAction="#signOutUser" prefHeight="32.0" prefWidth="81.0"
+            style="-fx-background-color: rgb(2, 182, 253);" text="退出登录" textFill="#f5f5f5"/>
+    <HBox layoutY="2.0" prefHeight="23.0" prefWidth="31.0">
+        <children>
+            <ImageView fx:id="imageViewPicture" fitHeight="45.0" fitWidth="53.0" pickOnBounds="true"
+                       preserveRatio="true">
+
+            </ImageView>
+        </children>
+    </HBox>
+
+    <HBox alignment="CENTER" layoutX="283.0" layoutY="-1.0" prefHeight="46.0" prefWidth="216.0" spacing="20"
+          style="-fx-alignment: center;">
+        <children>
+            <Label text="今日营业额" textFill="WHITE"/>
+            <TextField fx:id="turnoverInput" disable="true" prefHeight="11.0" prefWidth="108.0"
+                       style="-fx-background-color: #fff;"/>
+        </children>
+    </HBox>
+
+
+</AnchorPane>

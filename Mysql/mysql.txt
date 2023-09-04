@@ -1,0 +1,36 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : root
+Source Server Version : 50520
+Source Host           : localhost:3307
+Source Database       : db_accountsystem
+
+Target Server Type    : MYSQL
+Target Server Version : 50520
+File Encoding         : 65001
+
+Date: 2022-01-05 08:23:16
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for t_user
+-- ----------------------------
+DROP TABLE IF EXISTS `t_user`;
+CREATE TABLE `t_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT '',
+  `password` varchar(255) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
+  `nickname` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_user
+-- ----------------------------
+INSERT INTO `t_user` VALUES ('1', 'sdf', 'fsf', 'fsdf', 'dfdf');
+INSERT INTO `t_user` VALUES ('2', 'sdf', 'fsf', 'fsdf', 'dfdf');
+INSERT INTO `t_user` VALUES ('3', 'sdf', 'fsf', 'fsdf', 'dfdf');

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.qf.controller.CreateAccount"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="20"   >
+        <children>
+            <Text >欢迎来到注册界面</Text>
+            <HBox alignment="CENTER" spacing="20">
+                <Label text="用户名" />
+                <TextField promptText="请输入用户名" fx:id="usernameInput" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="21">
+                <Label text="密   码" />
+                <PasswordField promptText="请输入密码" fx:id="passwordInput" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="21">
+                <Label text="授权码" />
+                <PasswordField promptText="请输入授权码" fx:id="passwordInput" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="50">
+                <Button text="返回" onAction="#login"/>
+                <Button text="注册" onAction="#register"/>
+            </HBox>
+
+        </children>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="350.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.qf.controller.RegisterController">
+
+    <VBox alignment="CENTER" prefHeight="350" prefWidth="430" spacing="15">
+        <HBox alignment="CENTER" prefHeight="123" prefWidth="238" style="-fx-background-color: rgb(2, 182, 253);">
+            <HBox alignment="CENTER">
+
+                <ImageView fitHeight="74" fitWidth="74" pickOnBounds="true" preserveRatio="true">
+                    <!--           设置是否可以设置大仙，设置是否显示-->
+                    <Image url="@/com/qf/images/avatar.png"/>
+                    <!--               只能写sec下的路径-->
+                </ImageView>
+            </HBox>
+        </HBox>
+
+
+        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="430.0">
+            <TextField fx:id="usernameInput" prefHeight="33" prefWidth="238" promptText="请输入用户名"/>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <PasswordField fx:id="passwordInput" prefHeight="33" prefWidth="238" promptText="请输入密码"/>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <PasswordField fx:id="authorizationCodeInput" prefHeight="33" prefWidth="238" promptText="请输入授权码"/>
+        </HBox>
+
+        <VBox alignment="CENTER" spacing="10">
+            <Button onAction="#register" prefHeight="33" prefWidth="238" style="-fx-background-color: rgb(2, 182, 253);"
+                    text="注册" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button onAction="#login" prefHeight="31.0" prefWidth="240.0"
+                    style="-fx-background-color: rgb(2, 182, 253);" text="返回登录" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+        </VBox>
+
+    </VBox>
+</AnchorPane>
